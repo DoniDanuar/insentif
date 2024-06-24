@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `insentif`.`barang_insentif`.`idbarang_insentif` AS `idbarang_insentif`,`insentif`.`barang_insentif`.`idbarang` AS `idbarang`,`insentif`.`barang`.`namabarang` AS `namabarang`,`insentif`.`barang`.`jenis` AS `jenis`,`insentif`.`barang`.`satuan` AS `satuan`,`insentif`.`barang`.`hargajual` AS `hargajual`,`insentif`.`barang`.`foto` AS `foto`,`insentif`.`barang_insentif`.`targetqty_awal` AS `targetqty_awal`,`insentif`.`barang_insentif`.`targetqty_akhir` AS `targetqty_akhir`,`insentif`.`barang_insentif`.`bonus` AS `bonus`,`insentif`.`barang_insentif`.`tglinsert` AS `tglinsert`,`insentif`.`barang_insentif`.`tglupdate` AS `tglupdate`,`insentif`.`barang_insentif`.`statusaktif` AS `statusaktif`,`insentif`.`barang_insentif`.`idkaryawan` AS `idkaryawan`,`insentif`.`karyawan`.`namakaryawan` AS `namakaryawan`,`insentif`.`karyawan`.`jabatan` AS `jabatan` from ((`insentif`.`barang_insentif` join `insentif`.`karyawan` on(`insentif`.`barang_insentif`.`idkaryawan` = `insentif`.`karyawan`.`idkaryawan`)) join `insentif`.`barang` on(`insentif`.`barang_insentif`.`idbarang` = `insentif`.`barang`.`idbarang`))
+md5=d5fdb1bbde025d4f360a4817b86d9385
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=1
+with_check_option=0
+timestamp=2024-06-16 13:52:31
+create-version=2
+source=select `barang_insentif`.`idbarang_insentif` AS `idbarang_insentif`,`barang_insentif`.`idbarang` AS `idbarang`,`barang`.`namabarang` AS `namabarang`,`barang`.`jenis` AS `jenis`,`barang`.`satuan` AS `satuan`,`barang`.`hargajual` AS `hargajual`,`barang`.`foto` AS `foto`,`barang_insentif`.`targetqty_awal` AS `targetqty_awal`,`barang_insentif`.`targetqty_akhir` AS `targetqty_akhir`,`barang_insentif`.`bonus` AS `bonus`,`barang_insentif`.`tglinsert` AS `tglinsert`,`barang_insentif`.`tglupdate` AS `tglupdate`,`barang_insentif`.`statusaktif` AS `statusaktif`,`barang_insentif`.`idkaryawan` AS `idkaryawan`,`karyawan`.`namakaryawan` AS `namakaryawan`,`karyawan`.`jabatan` AS `jabatan` from ((`barang_insentif` join `karyawan` on(`barang_insentif`.`idkaryawan` = `karyawan`.`idkaryawan`)) join `barang` on(`barang_insentif`.`idbarang` = `barang`.`idbarang`))
+client_cs_name=utf8
+connection_cl_name=utf8_general_ci
+view_body_utf8=select `insentif`.`barang_insentif`.`idbarang_insentif` AS `idbarang_insentif`,`insentif`.`barang_insentif`.`idbarang` AS `idbarang`,`insentif`.`barang`.`namabarang` AS `namabarang`,`insentif`.`barang`.`jenis` AS `jenis`,`insentif`.`barang`.`satuan` AS `satuan`,`insentif`.`barang`.`hargajual` AS `hargajual`,`insentif`.`barang`.`foto` AS `foto`,`insentif`.`barang_insentif`.`targetqty_awal` AS `targetqty_awal`,`insentif`.`barang_insentif`.`targetqty_akhir` AS `targetqty_akhir`,`insentif`.`barang_insentif`.`bonus` AS `bonus`,`insentif`.`barang_insentif`.`tglinsert` AS `tglinsert`,`insentif`.`barang_insentif`.`tglupdate` AS `tglupdate`,`insentif`.`barang_insentif`.`statusaktif` AS `statusaktif`,`insentif`.`barang_insentif`.`idkaryawan` AS `idkaryawan`,`insentif`.`karyawan`.`namakaryawan` AS `namakaryawan`,`insentif`.`karyawan`.`jabatan` AS `jabatan` from ((`insentif`.`barang_insentif` join `insentif`.`karyawan` on(`insentif`.`barang_insentif`.`idkaryawan` = `insentif`.`karyawan`.`idkaryawan`)) join `insentif`.`barang` on(`insentif`.`barang_insentif`.`idbarang` = `insentif`.`barang`.`idbarang`))
+mariadb-version=100411

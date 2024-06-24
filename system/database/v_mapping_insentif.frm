@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `insentif`.`mapping_insentif`.`idmapping` AS `idmapping`,`insentif`.`mapping_insentif`.`tglmapping` AS `tglmapping`,`insentif`.`mapping_insentif`.`idkaryawan` AS `idkaryawan`,`insentif`.`karyawan`.`namakaryawan` AS `namakaryawan`,`insentif`.`karyawan`.`notelp` AS `notelp`,`insentif`.`karyawan`.`email` AS `email`,`insentif`.`karyawan`.`jabatan` AS `jabatan`,`insentif`.`mapping_insentif`.`idinsentif` AS `idinsentif`,`insentif`.`mapping_insentif`.`besarbonus` AS `besarbonus`,`insentif`.`mapping_insentif`.`tagerterjual` AS `tagerterjual`,`insentif`.`mapping_insentif`.`target` AS `target`,(select sum(`insentif`.`mapping_insentif_detail`.`bonus`) from `insentif`.`mapping_insentif_detail` where `insentif`.`mapping_insentif_detail`.`idmapping` = `insentif`.`mapping_insentif`.`idmapping`) AS `totalbonusbarang` from ((`insentif`.`mapping_insentif` join `insentif`.`karyawan` on(`insentif`.`mapping_insentif`.`idkaryawan` = `insentif`.`karyawan`.`idkaryawan`)) join `insentif`.`insentif` on(`insentif`.`mapping_insentif`.`idinsentif` = `insentif`.`insentif`.`idinsentif`))
+md5=685c634b25b3228f6252bddc27bb9859
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=1
+with_check_option=0
+timestamp=2024-06-16 13:52:32
+create-version=2
+source=select `mapping_insentif`.`idmapping` AS `idmapping`,`mapping_insentif`.`tglmapping` AS `tglmapping`,`mapping_insentif`.`idkaryawan` AS `idkaryawan`,`karyawan`.`namakaryawan` AS `namakaryawan`,`karyawan`.`notelp` AS `notelp`,`karyawan`.`email` AS `email`,`karyawan`.`jabatan` AS `jabatan`,`mapping_insentif`.`idinsentif` AS `idinsentif`,`mapping_insentif`.`besarbonus` AS `besarbonus`,`mapping_insentif`.`tagerterjual` AS `tagerterjual`,`mapping_insentif`.`target` AS `target`,(select sum(`mapping_insentif_detail`.`bonus`) from `mapping_insentif_detail` where `mapping_insentif_detail`.`idmapping` = `mapping_insentif`.`idmapping`) AS `totalbonusbarang` from ((`mapping_insentif` join `karyawan` on(`mapping_insentif`.`idkaryawan` = `karyawan`.`idkaryawan`)) join `insentif` on(`mapping_insentif`.`idinsentif` = `insentif`.`idinsentif`))
+client_cs_name=utf8
+connection_cl_name=utf8_general_ci
+view_body_utf8=select `insentif`.`mapping_insentif`.`idmapping` AS `idmapping`,`insentif`.`mapping_insentif`.`tglmapping` AS `tglmapping`,`insentif`.`mapping_insentif`.`idkaryawan` AS `idkaryawan`,`insentif`.`karyawan`.`namakaryawan` AS `namakaryawan`,`insentif`.`karyawan`.`notelp` AS `notelp`,`insentif`.`karyawan`.`email` AS `email`,`insentif`.`karyawan`.`jabatan` AS `jabatan`,`insentif`.`mapping_insentif`.`idinsentif` AS `idinsentif`,`insentif`.`mapping_insentif`.`besarbonus` AS `besarbonus`,`insentif`.`mapping_insentif`.`tagerterjual` AS `tagerterjual`,`insentif`.`mapping_insentif`.`target` AS `target`,(select sum(`insentif`.`mapping_insentif_detail`.`bonus`) from `insentif`.`mapping_insentif_detail` where `insentif`.`mapping_insentif_detail`.`idmapping` = `insentif`.`mapping_insentif`.`idmapping`) AS `totalbonusbarang` from ((`insentif`.`mapping_insentif` join `insentif`.`karyawan` on(`insentif`.`mapping_insentif`.`idkaryawan` = `insentif`.`karyawan`.`idkaryawan`)) join `insentif`.`insentif` on(`insentif`.`mapping_insentif`.`idinsentif` = `insentif`.`insentif`.`idinsentif`))
+mariadb-version=100411
